@@ -18,7 +18,7 @@ function App(){
     else{
       alert("Not enough desserts to buy the multiplier!")
     }
-    setCost(Math.pow(10, dessertMultiplier));
+    setCost(Math.pow(10, dessertMultiplier+1));
   };
 return(
   <div className='App'>
