@@ -1,4 +1,4 @@
-/* Center elements */
+
 .App {
     display: flex;
     flex-direction: column;
@@ -7,19 +7,17 @@
     height: 100vh;
   }
   
-  /* Style for the title */
   .Title {
     font-size: 2em;
     margin-bottom: 20px;
   }
   
-  /* Style for the cookie image */
   .Cookie {
     text-align: center;
   }
   
   .Cookie img {
-    width: 200px; /* Adjust the size based on your image */
+    width: 5px;
     cursor: pointer;
   }
   
