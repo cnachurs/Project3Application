@@ -5,7 +5,7 @@ import Login from './Login';
 import './App.css';
 import cookie from './cookie.png';
 import grandma from './grandma.jpg';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 function App(){
   const [dessert, setDessert] = useState(0);
@@ -13,7 +13,6 @@ function App(){
   const [costClickMultiplier, setCostClickMultiplier] = useState(10);
   const [costGrandmaUpgrade, setCostGrandmaUpgrade] = useState(100);
   const [autoClick, setAutoClick] = useState(1);
-
   const handleDessertClicks = () => {
     setDessert (dessert + dessertMultiplier);
   }
@@ -54,7 +53,19 @@ function App(){
 return(
   <div className='App'>
     <Router>
-      <div>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/Dashboard">Dashboard</Link>
+          </li>
+          <li>
+            <Link to="/Register">Register</Link>
+          </li>
+          <li>
+            <Link to="Login">Login</Link>
+          </li>
+        </ul>
+      </nav>
         <section>                              
             <Routes>
                <Route path="/Dashboard" element={<Dashboard/>}/>
@@ -62,7 +73,6 @@ return(
                <Route path="/Login" element={<Login/>}/>
             </Routes>                    
         </section>
-      </div>
     </Router>
     <h1 className='Title'>Dessert Clicker!</h1>
     <div>
