@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import Home from './Dashboard';
+import Dashboard from './Dashboard';
 import Register from './Register';
 import Login from './Login';
 import './App.css';
@@ -56,7 +56,8 @@ return(
     <Router>
       <div>
         <section>                              
-            <Routes>                                                                        <Route path="/" element={<Home/>}/>
+            <Routes>
+               <Route path="/Dashboard" element={<Dashboard/>}/>
                <Route path="/Register" element={<Register/>}/>
                <Route path="/Login" element={<Login/>}/>
             </Routes>                    
@@ -77,7 +78,7 @@ return(
       <text>Current Multiplier: {dessertMultiplier}</text>
     </div>
     <div>
-      <button onClick={buyGrandmaUpgrade}><img src={grandma} alt= 'Grandma' style ={{width:'200px', height: '200px'}}/></button>
+      <button onClick={buyGrandmaUpgrade}><img src={grandma} alt= 'Grandma' style ={{width:'360px', height: '180px'}}/></button>
     </div>
     <div>
       Cost: {costGrandmaUpgrade}
