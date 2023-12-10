@@ -65,7 +65,7 @@ return(
     </Router>
     <h1 className='Title'>Dessert Clicker!</h1>
     <div>
-    <button onClick={handleDessertClicks}><img src={cookie} alt = 'Cookie' className='Cookie' style={{width:'500px', height:'500px'}}/></button>
+    <button onClick={handleDessertClicks}><img src={cookie} alt = 'Cookie' className='Cookie' style={{width:'400px', height:'400px'}}/></button>
     </div>
     <div>
     <text>Your Desserts: {dessert}</text>
