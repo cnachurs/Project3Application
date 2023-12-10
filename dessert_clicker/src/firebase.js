@@ -28,7 +28,7 @@ const firebaseConfig = {
     measurementId: "G-QQWT5STB4B"
   };
 
-  const app = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 const googleProvider = new GoogleAuthProvider();
@@ -83,9 +83,14 @@ const sendPasswordResetEmail = async (email) => {
       alert(err.message);
     }
   };
-const logout = () => {
-  signOut(auth);
-};
+  const logout = async () => {
+    try {
+      await signOut(auth);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+  
 export {
   auth,
   db,

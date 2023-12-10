@@ -1,8 +1,7 @@
-import React, { useState, useEffect} from 'react';
-import Login from "./Login";
-import Register from "./Register";
-import Reset from "./Reset";
-import Dashboard from "./Dashboard";
+import React, {useState, useEffect} from 'react';
+import Home from './Dashboard';
+import Register from './Register';
+import Login from './Login';
 import './App.css';
 import cookie from './cookie.png';
 import grandma from './grandma.jpg';
@@ -55,12 +54,14 @@ function App(){
 return(
   <div className='App'>
     <Router>
-    <Routes>
-      <Route exact path="/" element={<Login />} />
-      <Route exact path="/register" element={<Register />} />
-      <Route exact path="/reset" element={<Reset />} />
-      <Route exact path="/dashboard" element={<Dashboard />} />
-    </Routes>
+      <div>
+        <section>                              
+            <Routes>                                                                        <Route path="/" element={<Home/>}/>
+               <Route path="/Register" element={<Register/>}/>
+               <Route path="/Login" element={<Login/>}/>
+            </Routes>                    
+        </section>
+      </div>
     </Router>
     <h1 className='Title'>Dessert Clicker!</h1>
     <div>
